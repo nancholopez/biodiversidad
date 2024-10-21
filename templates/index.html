@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Biodiversidad Boyacá y Cundinamarca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <!-- CONTENEDOR VIDEO-->
+    <div id="contenedor-inicial">
+        <h1 id="titulo-princ">Biodiversidad <br /><span>Boyacá y Cundinamarca</span></h1>
+        <video aria-hidden="true" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://pruebas.esaney.co/otros/videoplayback.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
+        </video>       
+    </div>
+
+    <!-- CONTENEDOR GLOBAL -->
+    <div class="contenedor-general">
+        <!-- CONTENEDOR IMAGEN Y SLIDES BOYACA -->
+        <div id="contenedor-boyaca">
+            <div class="imagenboy">
+                <img id="imagenes-dep" src="../static/imagenes/Boyaca.PNG" alt="Imagen de Boyacá" />
+            </div>
+
+            <div class="container">
+                <div class="slide-boy">
+                    <input type="radio" name="slider-boy" id="slide1-boy" checked>
+                    <input type="radio" name="slider-boy" id="slide2-boy">
+                    <input type="radio" name="slider-boy" id="slide3-boy">
+
+                    <div class="contenido-boy">
+                        <div class="primerslide">
+                            <div id="textboy">
+                                <h2>BOYACÁ</h2>
+                                <p><span>Información:</span> {{ info_boy }}</p>
+                                <p><span>Especies Estimadas:</span> {{ especies_estimadas_boy }}</p>
+                                <p><span>Especies Observadas:</span> {{ especies_observadas_boy }}</p>
+                                <p><span>Descripción:</span> {{ descripcion_boy }}</p>
+                            </div>
+                        </div>
+                        <div class="segundoslide">
+                            <h2>Lista de especies en Boyacá:</h2>
+                            <ul>
+                                {% for especie in especies_boy %}
+                                <li>{{ especie }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="tercerslide">
+                                <h2>Lista de plantas en Boyacá:</h2>
+                                <ul>
+                                    {% for planta in plantas_boy %}
+                                    <li>{{ planta }}</li>
+                                    {% endfor %}
+                                </ul>
+                        </div>
+                    </div>
+
+                    <div class="botones-boy">
+                        <label for="slide1-boy"></label>
+                        <label for="slide2-boy"></label>
+                        <label for="slide3-boy"></label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENEDOR IMAGEN Y SLIDES CUNDINAMARCA -->
+        <div id="contenedor-cundinamarca">
+            <div class="container">
+                <div class="slide-cund">
+                    <input type="radio" name="slider-cund" id="slide1-cund" checked>
+                    <input type="radio" name="slider-cund" id="slide2-cund">
+                    <input type="radio" name="slider-cund" id="slide3-cund">
+
+                    <div class="contenido-cund">
+                        <div class="primerslide">
+                            <div id="textcund">
+                                <h2>CUNDINAMARCA</h2>
+                                <p><span>Información:</span> {{ info_cund }}</p>
+                                <p><span>Especies Estimadas:</span> {{ especies_estimadas_cund }}</p>
+                                <p><span>Especies Observadas:</span> {{ especies_observadas_cund }}</p>
+                                <p><span>Descripción:</span> {{ descripcion_cund }}</p>
+                            </div>
+                        </div>
+                        <div class="segundoslide">
+                            <h2>Lista de especies en Cundinamarca:</h2>
+                            <ul>
+                                {% for especie in especies_cund %}
+                                <li>{{ especie }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="tercerslide">
+                                <h2>Lista de plantas en Cundinamarca:</h2>
+                                <ul>
+                                    {% for planta in plantas_cund %}
+                                    <li>{{ planta }}</li>
+                                    {% endfor %}
+                                </ul>                           
+                        </div>
+                    </div>
+
+                    <div class="botones-cund">
+                        <label for="slide1-cund"></label>
+                        <label for="slide2-cund"></label>
+                        <label for="slide3-cund"></label>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="imagencund">
+                <img id="imagenes-dep" src="../static/imagenes/Chicaque-Colparques.jpg" alt="Imagen de Cundinamarca" />
+            </div>
+        </div>
+
+
+        <!-- CONTENEDOR GALERÍA IMÁGENES -->
+        <div id="contenedor-galeria">
+            <div id="galeria">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img alt="Descripción 1" src="../static/imagenes/img1.jpg" />
+                        </div>
+                        <div class="card-back">
+                            <p>Parque Natural el Cocuy - Boyacá</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img alt="Descripción 2" src="../static/imagenes/img2.jpeg" />
+                        </div>
+                        <div class="card-back">
+                            <p>Páramos de Ocetá - Boyacá</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img alt="Descripción 3" src="../static/imagenes/img3.jpeg" />
+                        </div>
+                        <div class="card-back">
+                            <p>Venado de cola blanca - Cundinamarca</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img alt="Descripción 4" src="../static/imagenes/img4.jpg" />
+                        </div>
+                        <div class="card-back">
+                            <p>Etlingera elatior, también conocida como Jengibre rojo - Cundinamarca</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img alt="Descripción 5" src="../static/imagenes/img5.jpeg" />
+                        </div>
+                        <div class="card-back">
+                            <p>Oso Andino - Boyacá</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img alt="Descripción 6" src="../static/imagenes/img6.jpg" />
+                        </div>
+                        <div class="card-back">
+                            <p>Gavilán Pecho Rufo - Cundinamarca</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENEDOR GRAFICOS Y ESTADISTICAS -->
+        <div class="graficos">
+            <h2>Distribución de Especies</h2>
+            <img src="{{ url_for('static', filename='graficos/distribucion_especies.png') }}"
+                alt="Distribución de Especies" />
+
+            <h2>Distribución de Plantas</h2>
+            <img src="{{ url_for('static', filename='graficos/distribucion_plantas.png') }}"
+                alt="Distribución de Plantas" />
+        </div>
+
+        <!-- CONTENEDOR DATOS ESPECIES -->
+        <div id="contenedor-especies">
+            <form id="formulario">
+                <label for="departamento">Busca especies por departamento:</label>
+                <select id="departamento" name="departamento">
+                    <option value="Cundinamarca">Cundinamarca</option>
+                    <option value="Boyacá">Boyacá</option>
+                </select>
+                <button id="btn-filtrar" type="button">Filtrar</button>
+            </form>
+            <table id="tabla-especies">
+                <thead>
+                    <tr>
+                        <th>Especie</th>
+                        <th>Departamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <h3>@Proyecto de Biodiversidad de Boyacá y Cundinamarca desarrollado por David Celis y Hernán López para Talento Tech de la Universidad Sergio Arboleda</h3>
+    </footer>
+
+    <!-- CÓDIGO JAVASCRIPT PARA CARGAR DATOS EN CONTENEDOR DATOS ESPECIES -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            cargarDatos();
+        });
+
+        document.getElementById('btn-filtrar').addEventListener('click', filtrarDatos);
+
+        function cargarDatos() {
+            fetch('./static/especies.csv')
+                .then(response => {
+                    if (!response.ok) throw new Error('Error en la red');
+                    return response.text();
+                })
+                .then(data => {
+                    const rows = data.split('\n').map(row => row.split(','));
+                    const tbody = document.querySelector('#tabla-especies tbody');
+                    tbody.innerHTML = ''; // Vaciar el contenido antes de añadir nuevas filas
+                    rows.forEach(row => {
+                        const tr = document.createElement('tr');
+                        row.forEach(cell => {
+                            const td = document.createElement('td');
+                            td.textContent = cell;
+                            tr.appendChild(td);
+                        });
+                        tbody.appendChild(tr);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function filtrarDatos() {
+            const departamento = document.getElementById('departamento').value;
+            const tbody = document.querySelector('#tabla-especies tbody');
+            const filas = tbody.getElementsByTagName('tr');
+
+            for (let i = 0; i < filas.length; i++) {
+                const celdas = filas[i].getElementsByTagName('td');
+                const depCell = celdas[1]; // Asumiendo que la columna "Departamento" es la segunda
+                if (depCell && (depCell.textContent.trim() === departamento || departamento === '')) {
+                    filas[i].style.display = ''; // Mostrar la fila
+                } else {
+                    filas[i].style.display = 'none'; // Ocultar la fila
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

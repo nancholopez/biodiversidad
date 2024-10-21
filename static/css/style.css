@@ -1,0 +1,399 @@
+:root {
+    --fondo-primario: rgba(105, 226, 241, 0.1);
+    --fondo-secundario: #fff;    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+
+@media (max-width: 600px) {
+    * {
+        font-size: 14px;
+    }
+}
+
+html{
+    font-family: Mulish, sans-serif;
+    font-size: 20px;
+    font-optical-sizing: auto;
+}
+
+body {
+    width: 100vw;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: var(--fondo-primario);
+}
+
+h2 {  
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+}
+.contenedor-general{
+    width: 1400px;    
+    margin: auto;
+    background-color: var(--fondo-secundario);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Sombra ligera */
+                0 6px 20px rgba(0, 0, 0, 0.1); 
+}
+
+span{
+    font-weight: bold;
+}
+
+/*ESTILOS CONTENEDOR VIDEO*/
+#contenedor-inicial {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    max-height: 30vh;
+    box-shadow: 2px 5px 10px rgba(41, 216, 207, 3.1),
+                2px 10px 15px rgba(0, 0, 0, 3.2);
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+#titulo-princ {
+    position: absolute;
+    color: white;
+    width: 100%;
+    max-height: 30%;
+    bottom: 0;
+    margin: 5%;
+    font-size: 2em;
+    opacity: 80%;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1), /* Sombra tenue */   
+                 4px 4px 0px rgba(0, 0, 0, 0.2), /* Segunda sombra */              
+                 6px 6px 0px rgba(0, 0, 0, 0.3); /* Tercera sombra */        
+}
+
+#titulo-princ span {
+    font-style: italic;
+    font-size: 3.5rem;
+}
+
+/*ESTILOS CONTENEDOR BOYACÁ*/
+#contenedor-boyaca, #contenedor-cundinamarca{    
+    display: flex;    
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 500px;    
+    padding: 0 50px;
+}
+
+.imagenboy,
+#imagencund {
+    width: 50%;
+    height: 90%;
+    text-align: center;
+}
+
+#imagenes-dep {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Sombra ligera */
+                0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#textboy, #textcund {
+    width: 90%;
+    height: 90%; 
+    padding: 0 20px;
+}
+
+/*ESTILOS CONTENEDOR CUNDINAMARCA*/
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/*ESTILOS CONTENEDOR GALERÍA*/
+#contenedor-galeria {
+    width: 95%;
+    margin: 3% auto;
+    display: flex;
+    justify-content: center; /* Centra la galería */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+}
+
+#galeria{
+    display: flex;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Sombra ligera */
+                0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    perspective: 1000px; /* Controla la profundidad del efecto 3D */
+    margin: 10px; /* Espaciado entre tarjetas */
+}
+
+.card-inner {
+    position: relative;
+    width: 200px; /* Ajusta el ancho de la tarjeta */
+    height: 300px; /* Ajusta la altura de la tarjeta */
+    transition: transform 0.6s; /* Duración del efecto de volteo */
+    transform-style: preserve-3d; /* Mantiene la perspectiva 3D */
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Rota la tarjeta al pasar el mouse */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta el lado opuesto al voltear */
+}
+
+.card-front {
+    background-color: #fff; /* Color de fondo del lado frontal */
+    z-index: 2; /* Asegura que el frente esté por encima */
+}
+
+.card-back {
+    background-color: #81d56e; /* Color de fondo del lado posterior */
+    color: white; /* Color del texto en el lado posterior */
+    transform: rotateY(180deg); /* Rota el lado posterior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centra el texto en el lado posterior */
+    z-index: 1; /* Asegura que la parte posterior esté detrás */
+}
+
+.card-front img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+#galeria img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+}
+
+/*ESTILOS CONTENEDOR GRAFICOS*/
+.graficos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;    
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Sombra ligera */
+                0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*ESTILOS CONTENEDOR ESPECIES*/
+#contenedor-especies {
+    background: var(--fondo-pagina);
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+/*CONTENEDOR SLIDES*/
+
+.container{
+    position: relative;
+    width: 50%;
+    height: 90%;    
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Sombra ligera */
+                0 6px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.slide-boy, .slide-cund{
+    width: 100%;
+    height: 100%;
+}
+
+.primerslide,.segundoslide,.tercerslide{
+    /*position: relative;*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/*Slide Boyacá*/
+.slide-boy input{
+    visibility: hidden;
+    display: none;    
+}
+
+.slide-boy input:nth-child(1):checked ~ .botones-boy label:nth-child(1),
+.slide-boy input:nth-child(2):checked ~ .botones-boy label:nth-child(2),
+.slide-boy input:nth-child(3):checked ~ .botones-boy label:nth-child(3){
+    opacity: 1;
+    /*scroll-margin: 1.2;*/
+    width: 50px; 
+
+}
+
+.botones-boy, .botones-cund{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 30px;
+    gap: 10px;
+}
+
+.botones-boy label, .botones-cund label{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(41, 216, 207, 3.1);
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 1;
+    transition: 300ms ease-in-out;    
+}
+
+.botones-boy label:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.contenido-boy{
+    position: relative;
+    width: 300%;
+    height: 100%;
+    display: flex;
+    transition: 400ms ease-in-out;    
+    left: 0;
+}
+
+#slide1-boy:checked ~ .contenido-boy {
+    left: 0;
+}
+
+#slide2-boy:checked ~ .contenido-boy {
+    left: -100%;
+}
+
+#slide3-boy:checked ~ .contenido-boy {
+    left: -200%;
+}
+
+/*Slide Cundinamarca*/
+.slide-cund input{
+    visibility: hidden;
+    display: none;    
+}
+
+.slide-cund input:nth-child(1):checked ~ .botones-cund label:nth-child(1),
+.slide-cund input:nth-child(2):checked ~ .botones-cund label:nth-child(2),
+.slide-cund input:nth-child(3):checked ~ .botones-cund label:nth-child(3){
+    opacity: 1;
+    /*scroll-margin: 1.2;*/
+    width: 50px;    
+}
+
+.contenido-cund{
+    position: relative;
+    width: 300%;
+    height: 100%;
+    display: flex;
+    transition: 400ms ease-in-out;    
+    left: 0;
+}
+
+#slide1-cund:checked ~ .contenido-cund {
+    left: 0;
+}
+
+#slide2-cund:checked ~ .contenido-cund {
+    left: -100%;
+}
+
+#slide3-cund:checked ~ .contenido-cund {
+    left: -200%;
+}
+
+/*contenedor tabla*/
+#formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 80%;    
+    margin: 5% auto 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Sombra ligera */
+                0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Sombra ligera */
+                0 6px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+#btn-filtrar {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-filtrar:hover {
+    background-color: #45a049;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: aquamarine;
+}
+
+h3 {
+    text-align: center;
+    font-size: 0.8rem;
+}
