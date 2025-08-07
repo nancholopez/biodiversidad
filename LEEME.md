@@ -66,8 +66,8 @@ biodiversidad/
 ├── app.py               # Código principal de la aplicación Flask
 ├── requirements.txt     # Dependencias necesarias
 ├── LEEME.md            # Este archivo
-├── templates/           # Plantillas HTML (si se incluyen)
-└── static/              # Archivos estáticos como CSS o imágenes (si se incluyen)
+├── templates/           # Plantilla HTML
+└── static/              # Archivos estáticos como CSS o imágenes
 ```
 
 ---
