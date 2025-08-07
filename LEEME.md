@@ -1,6 +1,6 @@
 # Proyecto Flask: Visualización de Biodiversidad en Boyacá, Colombia
 
-Este proyecto es una aplicación web desarrollada con **Flask** que realiza **web scraping** sobre el sitio oficial de cifras de biodiversidad en el departamento de Boyacá ([https://cifras.biodiversidad.co/boyaca](https://cifras.biodiversidad.co/boyaca)). Su objetivo es extraer, procesar y presentar datos clave sobre las especies y plantas observadas en este departamento colombiano.
+Este proyecto es una aplicación web desarrollada con **Flask** que realiza **web scraping** sobre el sitio oficial de cifras de biodiversidad en el departamento de Boyacá y Cundinamarca ([https://cifras.biodiversidad.co/boyaca](https://cifras.biodiversidad.co/boyaca)). Su objetivo es extraer, procesar y presentar datos clave sobre las especies y plantas observadas en estos departamentos colombianos.
 
 ---
 
